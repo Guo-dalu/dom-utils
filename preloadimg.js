@@ -1,7 +1,9 @@
 /*
 data-imgurl='../images'
 */
+//test git
 function addLoadEvent(func) {
+	
 	var oldonload = window.onload;
 	
 	var args = [].slice.call(arguments,1)
