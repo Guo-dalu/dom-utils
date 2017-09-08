@@ -1,0 +1,91 @@
+/*============================
+=            mask            =
+============================*/
+.mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: white;
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  z-index: 200; }
+
+.ji {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  left: 50%;
+  top: 70%;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.6); }
+  .ji::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    margin: auto;
+    background: url("bang.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 5; }
+
+.eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-72%);
+  transform: translateX(-50%) translateY(-72%);
+  width: 21px;
+  height: 21px;
+  background: #fff;
+  border: 2px solid black;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 7;
+  -webkit-animation: pin 1.5s linear infinite;
+  animation: pin 1.5s linear infinite; }
+  .eye::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    background: black;
+    border-radius: 50%;
+    z-index: 10; }
+
+/**** keyframes animations *****/
+@-webkit-keyframes pin {
+  from {
+    -webkit-transform: translateX(-50%) translateY(-72%) rotateZ(-360deg); }
+  to {
+    -webkit-transform: translateX(-50%) translateY(-72%) rotateZ(0deg); } }
+/************/
+main {
+  padding: 2em;
+  opacity: .2; }
+  main p {
+    background-color: #5e4290;
+    border: 2px dashed pink;
+    padding: 2em; }
+  main p:last-child {
+    color: transparent;
+    background: url("invitebg.png") no-repeat transparent;
+    background-size: 100%; }
+
+/*# sourceMappingURL=littlehelper.css.map */
